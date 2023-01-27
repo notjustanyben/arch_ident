@@ -4,9 +4,6 @@ arm_arch = "aarch64"
 arm_arch2 = "ARM64"
 intel_arch = "x86"
 
-# arch = subprocess.Popen(["uname -m"], shell=True, encoding="utf-8")
-# arch = subprocess.run(["uname -m"], shell=True, encoding="utf-8")
-
 def is_arm():
     arch = subprocess.check_output(["uname -a"], shell=True, encoding="utf-8")
     if str(arm_arch) or str(arm_arch2) in arch:
