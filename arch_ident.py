@@ -10,7 +10,6 @@ def is_arm():
         return True
     else:
         return False
-is_arm()
 
 def is_intel():
     arch = subprocess.check_output(["uname -a"], shell=True, encoding="utf-8")
@@ -18,7 +17,6 @@ def is_intel():
         return True
     else:
         return False
-is_intel()
 
 if is_arm():
     print("\naarch64/ARM64 Architecture found!\n")
